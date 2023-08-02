@@ -23,3 +23,14 @@ class AddSub(unittest.TestCase):
 
     def test_sub_1000_and_5000(self):
         self.assertEqual(calculator.sub(1000, 5000), -4000)
+
+
+class AddMul(unittest.TestCase):
+    def test_mul_1_and_1(self):
+        self.assertEqual(calculator.mul(1, 1), 1)
+
+    def test_mul_10_and_0(self):
+        self.assertEqual(calculator.mul(10, 0), 0)
+
+    def test_mul_1000_and_5000(self):
+        self.assertEqual(calculator.mul(1000, 5000), 5000000)

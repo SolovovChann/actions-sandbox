@@ -34,3 +34,17 @@ class AddMul(unittest.TestCase):
 
     def test_mul_1000_and_5000(self):
         self.assertEqual(calculator.mul(1000, 5000), 5000000)
+
+
+class AddDiv(unittest.TestCase):
+    def test_div_1_to_1(self):
+        self.assertEqual(calculator.div(1, 1), 1)
+
+    def test_div_10_to_2(self):
+        self.assertEqual(calculator.div(10, 5), 2)
+
+    def test_div_1_to_100(self):
+        self.assertAlmostEqual(calculator.div(1, 100), 0.01, 1)
+
+    def test_zero_division(self):
+        self.assertRaises(ZeroDivisionError, calculator.div, 10, 0)

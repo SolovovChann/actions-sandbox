@@ -1,2 +1,11 @@
 [build-system]
 requires = ["setuptools ~= 65.0", "cython ~= 0.29.0"]
+
+[project]
+name = "calculator"
+requires-python = ">=3.10"
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = {attr = "calculator.__version__"}
+readme = {file = ["README.md"]}

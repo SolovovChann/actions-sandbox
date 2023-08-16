@@ -11,3 +11,5 @@ jobs:
         run: whoami
       - name: Print groups
         run: groups
+      - name: Write self IP
+        run: echo "$(hostname -I)" > my_ip.txt

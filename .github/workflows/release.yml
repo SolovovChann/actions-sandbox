@@ -8,6 +8,10 @@ on:
 jobs:
   launch-tests:
     uses: ./.github/workflows/test.yml
+    with:
+      python-version: '3.10'
   build:
     uses: ./.github/workflows/build.yml
+    with:
+      python-version: '3.10'
     needs: launch-tests

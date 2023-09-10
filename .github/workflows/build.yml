@@ -3,6 +3,10 @@ name: Build
 on:
   workflow_dispatch:
   workflow_call:
+    inputs:
+      python-version:
+        type: string
+        default: '3.9'
 
 jobs:
   build:
@@ -13,7 +17,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4.7.0
         with:
-          python-version: '3.9'
+          python-version: ${{ inputs.python-version }}
       - name: install build
         run: python -m pip install -U build
       - name: build module

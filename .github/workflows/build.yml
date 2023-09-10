@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Setup Python ${{ inputs.python-version }}
+      - name: Setup Python
         uses: actions/setup-python@v4.7.0
         with:
           python-version: ${{ inputs.python-version }}
